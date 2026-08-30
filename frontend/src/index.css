@@ -1,0 +1,373 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+    /* Editorial Warm Ivory & Muted Champagne Gold Palette */
+    --color-bg-primary: #F7F4EE;      /* Warm Ivory / Off-white */
+    --color-bg-secondary: #E9E1D3;    /* Soft Beige */
+    --color-bg-supporting: #DDE0D6;   /* Very Soft Sage / Stone */
+    --color-accent-gold: #B89B5E;     /* Muted Antique Gold / Champagne */
+    --color-accent-gold-dark: #8F743E;/* Deep Gold */
+    --color-accent-gold-light: #D4BD8A;
+    --color-text-primary: #292929;    /* Deep Charcoal */
+    --color-text-secondary: #6F6A61;  /* Warm Gray */
+    --color-border: #D8CEBE;          /* Soft border */
+    --color-border-subtle: #E5DEC9;
+    --color-navy-dark: #121A29;       /* Deep Navy Accent */
+    --color-navy-card: #182235;
+    --color-white: #FFFFFF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+    color: var(--color-text-primary);
+  }
+
+  .font-serif-body {
+    font-family: var(--font-serif);
+  }
+}
+
+/* ============================================
+   GOLD & LUXURY UTILITY CLASSES
+   ============================================ */
+.gold-text {
+  color: #B89B5E;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B89B5E 0%, #8F743E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #B89B5E 0%, #8F743E 100%);
+}
+
+.gold-border {
+  border-color: #B89B5E;
+}
+
+.gold-border-subtle {
+  border-color: rgba(184, 155, 94, 0.35);
+}
+
+/* ============================================
+   EDITORIAL LAW CARDS & SECTION CONTAINERS
+   ============================================ */
+.law-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent-gold);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 4px;
+}
+
+.law-card:hover {
+  border-color: var(--color-accent-gold);
+  box-shadow: 0 12px 36px rgba(41, 41, 41, 0.08);
+  transform: translateY(-3px);
+}
+
+.law-card-navy {
+  background: #182235;
+  border: 1px solid rgba(184, 155, 94, 0.35);
+  border-top: 3px solid var(--color-accent-gold);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 4px;
+}
+
+.law-card-navy:hover {
+  border-color: var(--color-accent-gold);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   PHOENIX-STYLE SECTION HEADING
+   ============================================ */
+.section-rule {
+  display: inline-block;
+  width: 36px;
+  height: 2px;
+  background: #B89B5E;
+  margin-right: 8px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+/* ============================================
+   ADVOCATE SHAH-STYLE TOP BAR
+   ============================================ */
+.top-bar {
+  background: #121A29;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 12px;
+  border-bottom: 2px solid #B89B5E;
+}
+
+/* ============================================
+   PRACTICE AREA - ICON CIRCLE (Phoenix Style)
+   ============================================ */
+.icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #B89B5E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(184, 155, 94, 0.25);
+  transition: all 0.3s ease;
+}
+
+.icon-circle svg {
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+}
+
+/* ============================================
+   HERO IMAGE HOVER REVEAL EFFECT
+   ============================================ */
+.hero-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 20px 50px rgba(41, 41, 41, 0.18);
+  border: 1px solid var(--color-border);
+}
+
+.hero-image-primary {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+}
+
+.hero-image-secondary {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.04);
+}
+
+.hero-image-container:hover .hero-image-primary {
+  opacity: 0.15;
+  transform: scale(1.05);
+}
+
+.hero-image-container:hover .hero-image-secondary {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #E9E1D3;
+}
+::-webkit-scrollbar-thumb {
+  background: #B89B5E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8F743E;
+}
+
+/* ============================================
+   FADE-IN PAGE TRANSITION
+   ============================================ */
+@keyframes fadein-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fadein-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ============================================
+   GOLD PULSE RING (for live indicators)
+   ============================================ */
+@keyframes gold-ring-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(184, 155, 94, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(184, 155, 94, 0);
+  }
+}
+
+.gold-pulse {
+  animation: gold-ring-pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   COUNT-UP NUMBER STYLING
+   ============================================ */
+.stat-number {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================
+   SECTION TRANSITIONS
+   ============================================ */
+.section-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   GOLD DIVIDER
+   ============================================ */
+.gold-divider {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #B89B5E 0%, #D4BD8A 100%);
+  border-radius: 2px;
+}
+
+/* ============================================
+   PREMIUM BUTTON STATES
+   ============================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.75rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #121A29;
+  border: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #B89B5E;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(184, 155, 94, 0.25);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.75rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #292929;
+  background: transparent;
+  border: 2px solid #D8CEBE;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: #B89B5E;
+  color: #B89B5E;
+}
+
+/* ============================================
+   FLOATING LABEL INPUTS (polish)
+   ============================================ */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #F7F4EE;
+  border: 1px solid #D8CEBE;
+  color: #292929;
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #B89B5E;
+  box-shadow: 0 0 0 3px rgba(184, 155, 94, 0.12);
+}
+
+/* ============================================
+   CORNER ORNAMENT UTILITY
+   ============================================ */
+.corner-ornament::before,
+.corner-ornament::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: rgba(184, 155, 94, 0.45);
+  border-style: solid;
+}
+
+.corner-ornament::before {
+  top: 10px;
+  left: 10px;
+  border-width: 2px 0 0 2px;
+}
+
+.corner-ornament::after {
+  bottom: 10px;
+  right: 10px;
+  border-width: 0 2px 2px 0;
+}
+
+/* ============================================
+   RESPONSIVE HERO IMAGE ASPECT RATIO
+   ============================================ */
+@media (max-width: 640px) {
+  .hero-image-container {
+    aspect-ratio: 4 / 3;
+  }
+}
