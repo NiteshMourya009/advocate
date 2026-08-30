@@ -99,7 +99,7 @@ export default function AboutSection() {
 
             <div className="space-y-4 text-[15px] text-[#3A4155] leading-[1.8]">
               <p>
-                Under the joint stewardship of <strong className="text-[#0F2044] font-semibold">Adv. Jigar K. Agarwal</strong> (M.Com., LL.B.) and <strong className="text-[#0F2044] font-semibold">Adv. Suman J. Agarwal</strong>, our chamber is established in Santacruz (West), Mumbai, providing dedicated legal consultation, statutory advisory, and advocacy representation across civil, criminal, property, and commercial matters.
+                Under the joint stewardship of <strong className="text-[#0F2044] font-semibold">Adv. Jigar K. Agarwal</strong> (M.Com., LL.B.) and <strong className="text-[#0F2044] font-semibold">Adv. Suman J. Agarwal</strong> (B.L.S., LL.B.), our chamber is established in Santacruz (West), Mumbai, providing dedicated legal consultation, statutory advisory, and advocacy representation across civil, criminal, property, and commercial matters.
               </p>
               <p>
                 We recognize that navigating legal proceedings, contractual commitments, and property disputes can be demanding. Our approach emphasizes straightforward advice, disciplined procedural compliance, and strategic foresight to safeguard your legal rights.

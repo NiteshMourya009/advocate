@@ -68,7 +68,7 @@ export default function ContactPage() {
               {contactInfo.advocates.suman.name}
             </h3>
             <p className="text-xs text-[#6F6A61]">
-              {contactInfo.advocates.suman.designation}
+              {contactInfo.advocates.suman.qualification} • {contactInfo.advocates.suman.designation}
             </p>
             <div className="pt-2 flex flex-col gap-2">
               <a

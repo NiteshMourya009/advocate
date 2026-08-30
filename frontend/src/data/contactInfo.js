@@ -30,7 +30,7 @@ export const contactInfo = {
     suman: {
       name: "Adv. Suman J. Agarwal",
       shortName: "Suman",
-      qualification: "",
+      qualification: "B.L.S., LL.B.",
       designation: "Advocate",
       phone: "+91 82867 67881",
       phoneClean: "+918286767881",

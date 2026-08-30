@@ -76,7 +76,7 @@ export default function AboutPage() {
             </h2>
 
             <p>
-              Under the joint leadership of <strong className="text-[#292929]">Adv. Jigar K. Agarwal</strong> (M.Com., LL.B.) and <strong className="text-[#292929]">Adv. Suman J. Agarwal</strong>, our chamber provides comprehensive legal services spanning advisory, statutory documentation, dispute negotiation, and litigation representation.
+              Under the joint leadership of <strong className="text-[#292929]">Adv. Jigar K. Agarwal</strong> (M.Com., LL.B.) and <strong className="text-[#292929]">Adv. Suman J. Agarwal</strong> (B.L.S., LL.B.), our chamber provides comprehensive legal services spanning advisory, statutory documentation, dispute negotiation, and litigation representation.
             </p>
 
             <p>

@@ -371,3 +371,46 @@
     aspect-ratio: 4 / 3;
   }
 }
+
+/* ============================================
+   FLOATING TESTIMONIALS MARQUEE (LEFT TO RIGHT)
+   ============================================ */
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-ltr {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 38s linear infinite;
+}
+
+.animate-marquee-ltr:hover,
+.pause-hover:hover {
+  animation-play-state: paused !important;
+}
+
+.animate-marquee-rtl {
+  display: flex;
+  width: max-content;
+  animation: marquee-rtl 42s linear infinite;
+}
+
+.animate-marquee-rtl:hover {
+  animation-play-state: paused !important;
+}
+

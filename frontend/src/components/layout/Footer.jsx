@@ -72,7 +72,7 @@ export default function Footer() {
                   {contactInfo.advocates.suman.name}
                 </div>
                 <div className="text-white/60 text-[11px]">
-                  {contactInfo.advocates.suman.designation}
+                  {contactInfo.advocates.suman.qualification} • {contactInfo.advocates.suman.designation}
                 </div>
                 <div className="mt-2">
                   <a
