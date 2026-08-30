@@ -124,8 +124,8 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
-              {navLinks.map((link) => {
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-2 shrink-0">
+              {navLinks.filter(link => link.name !== 'Contact').map((link) => {
                 const isAnchor = link.path.includes('#')
                 const isActive = !isAnchor && location.pathname === link.path
 
@@ -134,7 +134,7 @@ export default function Navbar() {
                     key={link.name}
                     href={link.path}
                     onClick={(e) => handleNavClick(e, link.path)}
-                    className="px-3.5 py-2 text-xs font-bold transition-all duration-200 text-[#292929] hover:text-[#B89B5E] font-heading tracking-widest uppercase"
+                    className="px-3 py-2 text-xs font-bold transition-all duration-200 text-[#292929] hover:text-[#B89B5E] font-heading tracking-widest uppercase whitespace-nowrap"
                   >
                     {link.name}
                   </a>
@@ -143,7 +143,7 @@ export default function Navbar() {
                     key={link.name}
                     to={link.path}
                     className={cn(
-                      'px-3.5 py-2 text-xs font-bold transition-all duration-200 font-heading tracking-widest uppercase border-b-2',
+                      'px-3 py-2 text-xs font-bold transition-all duration-200 font-heading tracking-widest uppercase border-b-2 whitespace-nowrap',
                       isActive
                         ? 'text-[#B89B5E] border-[#B89B5E]'
                         : 'text-[#292929] hover:text-[#B89B5E] border-transparent hover:border-[#B89B5E]'
@@ -156,13 +156,13 @@ export default function Navbar() {
             </nav>
 
             {/* Right Consultation Button */}
-            <div className="hidden sm:flex items-center gap-3">
-              <a
-                href="/contact"
-                className="px-5 py-2.5 text-xs font-bold font-heading uppercase tracking-widest text-white bg-[#121A29] hover:bg-[#B89B5E] transition-colors rounded-sm shadow-sm"
+            <div className="hidden sm:flex items-center gap-3 shrink-0">
+              <Link
+                to="/contact"
+                className="px-5 py-2.5 text-xs font-bold font-heading uppercase tracking-widest text-white bg-[#121A29] hover:bg-[#B89B5E] transition-colors rounded-sm shadow-sm whitespace-nowrap"
               >
                 Schedule Consultation
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Menu Toggle */}
@@ -220,12 +220,12 @@ export default function Navbar() {
             </div>
 
             <div className="pt-3 flex flex-col gap-2.5 border-t border-[#D8CEBE]">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="w-full text-center py-3 text-xs font-bold font-heading uppercase tracking-widest text-white bg-[#121A29] hover:bg-[#B89B5E] transition-colors"
               >
                 Schedule Consultation
-              </a>
+              </Link>
               <div className="grid grid-cols-2 gap-2">
                 <a
                   href={contactInfo.advocates.jigar.whatsappUrl}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Quote, Star, ShieldCheck, Scale, Sparkles, Building, FileCheck, CheckCircle2, UserCheck, Play, Pause } from 'lucide-react'
 import { testimonialsData } from '../data/testimonials'
 import Modal from '../components/common/Modal'
@@ -277,13 +278,13 @@ export default function TestimonialsSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 onClick={() => setSelectedTestimonial(null)}
                 className="w-full text-center px-6 py-3 bg-[#121A29] hover:bg-[#B89B5E] text-white text-xs font-bold font-heading uppercase tracking-widest transition-colors shadow"
               >
                 Schedule an Appointment
-              </a>
+              </Link>
             </div>
           </div>
         </Modal>

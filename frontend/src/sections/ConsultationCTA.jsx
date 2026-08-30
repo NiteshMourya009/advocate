@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { MessageCircle, Phone, ArrowRight, ShieldCheck } from 'lucide-react'
 import { contactInfo } from '../data/contactInfo'
 
@@ -52,13 +53,13 @@ export default function ConsultationCTA() {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto">
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="flex-1 w-full flex items-center justify-center gap-2 px-7 py-3.5 text-xs sm:text-sm font-bold font-heading uppercase tracking-widest text-[#121A29] bg-[#B89B5E] hover:bg-[#D4BD8A] transition-all duration-300 shadow-md"
           >
             Fix an Appointment
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
 
           <a
             href={contactInfo.advocates.jigar.whatsappUrl}

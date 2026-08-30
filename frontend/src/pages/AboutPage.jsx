@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { contactInfo } from '../data/contactInfo'
 import { Scale, ShieldCheck, Lock, BookOpen, Handshake, ArrowRight } from 'lucide-react'
 import ConsultationCTA from '../sections/ConsultationCTA'
@@ -28,45 +29,36 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="pt-24 pb-0 bg-[#F7F4EE]">
-      {/* Header Banner */}
+    <div className="pt-24 pb-0 bg-[#F7F4EE] page-enter animate-fadein-up">
+      {/* Editorial Profile Banner */}
       <section className="px-4 sm:px-6 lg:px-8 py-14 max-w-5xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#B89B5E] text-xs font-bold tracking-widest uppercase text-[#B89B5E] font-heading mb-6 shadow-sm">
           <Scale className="w-3.5 h-3.5" />
-          <span>About Agarwal Legal</span>
+          <span>Our Foundation</span>
         </div>
 
         <h1 className="text-3xl sm:text-5xl font-bold font-heading text-[#292929] mb-6">
-          Legal Counsel Built on Trust and Integrity
+          Chamber &amp; Practice Overview
         </h1>
 
         <div className="h-1 w-16 bg-[#B89B5E] mx-auto mb-6" />
 
         <p className="text-base sm:text-lg text-[#6F6A61] max-w-3xl mx-auto leading-relaxed">
-          Operating from Santacruz (West), Mumbai, our practice is dedicated to delivering thoughtful, strategic, and principled advocacy tailored to protect our clients' vital rights and commercial interests.
+          Agarwal Legal is a Mumbai-based legal consultancy operated by Adv. Jigar K. Agarwal and Adv. Suman J. Agarwal, committed to providing client-centered, ethical advocacy and legal consultation.
         </p>
       </section>
 
-      {/* Main Narrative */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 max-w-6xl mx-auto">
+      {/* Profile Details */}
+      <section className="px-4 sm:px-6 lg:px-8 pb-16 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left: Emblem Presentation */}
-          <div className="lg:col-span-5 bg-white border border-[#D8CEBE] border-t-4 border-t-[#B89B5E] p-8 sm:p-12 text-center shadow-md">
+          {/* Left: Office/Advocate Image Visual */}
+          <div className="lg:col-span-5 relative">
+            <div className="absolute top-4 left-4 w-full h-full border border-[#B89B5E] -z-10" />
             <img
-              src="/logo.png"
-              alt="Agarwal Legal Emblem"
-              className="w-36 h-36 mx-auto object-contain mb-6 drop-shadow"
+              src="/hero-1.jpg"
+              alt="Advocate Jigar K. Agarwal & Adv. Suman J. Agarwal Legal Chambers"
+              className="w-full aspect-[4/3] object-cover shadow border border-[#D8CEBE]"
             />
-            <h3 className="text-xl font-bold font-heading text-[#292929]">
-              AGARWAL LEGAL
-            </h3>
-            <p className="text-xs text-[#B89B5E] font-semibold tracking-widest uppercase mt-1">
-              Advocates & Legal Consultants • Mumbai
-            </p>
-            <div className="h-[1px] w-20 bg-[#B89B5E] mx-auto my-5" />
-            <p className="text-xs text-[#6F6A61] italic font-serif">
-              "{contactInfo.quote}"
-            </p>
           </div>
 
           {/* Right: Practice Overview */}
@@ -88,19 +80,19 @@ export default function AboutPage() {
             </p>
 
             <div className="pt-4 flex flex-wrap items-center gap-4">
-              <a
-                href="/advocates"
+              <Link
+                to="/advocates"
                 className="inline-flex items-center gap-2 px-6 py-3 text-xs font-bold font-heading uppercase tracking-widest text-white bg-[#121A29] hover:bg-[#B89B5E] transition-colors shadow"
               >
                 View Advocate Profiles
                 <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 text-xs font-bold font-heading uppercase tracking-widest text-[#292929] bg-white border border-[#D8CEBE] hover:border-[#B89B5E] transition-colors shadow-sm"
               >
-                Chamber Office & Map
-              </a>
+                Chamber Office &amp; Map
+              </Link>
             </div>
           </div>
         </div>
@@ -117,7 +109,7 @@ export default function AboutPage() {
             <div className="w-8 h-px bg-[#B89B5E]" />
           </div>
           <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#292929]">
-            Practicing with Purpose & Precision
+            Practicing with Purpose &amp; Precision
           </h2>
         </div>
 

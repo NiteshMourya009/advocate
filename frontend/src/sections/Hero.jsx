@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { MessageCircle, Phone, ArrowRight, ShieldCheck, Scale, Compass, Award, Sparkles } from 'lucide-react'
 import { contactInfo } from '../data/contactInfo'
@@ -71,13 +72,13 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
             >
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-xs sm:text-sm font-bold font-heading uppercase tracking-widest text-white bg-[#121A29] hover:bg-[#B89B5E] transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 Schedule Consultation
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
 
               <a
                 href={contactInfo.advocates.jigar.whatsappUrl}

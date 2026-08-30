@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Phone, Clock, Calendar, ArrowRight, ShieldAlert, FileText } from 'lucide-react'
 import { contactInfo } from '../data/contactInfo'
 
@@ -48,13 +49,13 @@ export default function QuickContactBar() {
               </p>
             </div>
             <div>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-between gap-3 w-full sm:w-auto px-5 py-2.5 bg-white text-[#121A29] hover:bg-[#B89B5E] hover:text-white transition-colors text-xs font-bold font-heading uppercase tracking-wider rounded-sm shadow"
               >
                 <span>Fix an Appointment</span>
                 <ArrowRight className="w-3.5 h-3.5" />
-              </a>
+              </Link>
             </div>
           </div>
 

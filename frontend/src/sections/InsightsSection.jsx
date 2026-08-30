@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ArrowRight, BookOpen, Clock, Calendar, User, CheckCircle2 } from 'lucide-react'
 import { insightsData } from '../data/insights'
 import Modal from '../components/common/Modal'
@@ -117,13 +118,13 @@ export default function InsightsSection() {
             </div>
 
             <div className="pt-4 border-t border-[#D8CEBE] flex justify-end">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 onClick={() => setSelectedInsight(null)}
                 className="px-6 py-2.5 bg-[#121A29] text-white hover:bg-[#B89B5E] text-xs font-bold font-heading uppercase tracking-widest transition-colors"
               >
                 Discuss this Matter with Our Advocates
-              </a>
+              </Link>
             </div>
           </div>
         </Modal>

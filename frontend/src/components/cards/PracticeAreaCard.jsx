@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Scale, ShieldAlert, Building2, Users, ShoppingBag, FileCheck,
   FileText, Briefcase, Handshake, Compass, ArrowRight, CheckCircle2, MessageCircle
@@ -59,7 +60,7 @@ export default function PracticeAreaCard({ practice }) {
 
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-[#C5A059] font-heading mb-3">
-              Included Legal Services & Matters
+              Included Legal Services &amp; Matters
             </h4>
             <ul className="space-y-2.5">
               {practice.scope.map((item, index) => (
@@ -76,13 +77,13 @@ export default function PracticeAreaCard({ practice }) {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               onClick={() => setModalOpen(false)}
               className="flex-1 w-full text-center px-5 py-3 text-sm font-bold font-heading uppercase tracking-wide text-white bg-[#0F2044] hover:bg-[#C5A059] transition-colors"
             >
               Consult for this Matter
-            </a>
+            </Link>
             <a
               href={contactInfo.advocates.jigar.whatsappUrl}
               target="_blank"

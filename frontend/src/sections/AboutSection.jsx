@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Lock, Scale, FileCheck, ArrowRight } from 'lucide-react'
 import { contactInfo } from '../data/contactInfo'
 
@@ -72,12 +73,12 @@ export default function AboutSection() {
                 Chapel Lane, Station Road,<br />
                 Santacruz (West), Mumbai – 400 054.
               </p>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-1.5 mt-4 text-xs font-semibold text-[#C5A059] hover:text-white transition-colors"
               >
                 View Map & Directions <ArrowRight className="w-3 h-3" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -127,18 +128,18 @@ export default function AboutSection() {
 
             {/* Action CTA */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href="/advocates"
+              <Link
+                to="/advocates"
                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold font-heading uppercase tracking-wide text-white bg-[#0F2044] hover:bg-[#C5A059] transition-colors"
               >
                 Meet the Advocates <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="/practice-areas"
+              </Link>
+              <Link
+                to="/practice-areas"
                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold font-heading uppercase tracking-wide text-[#0F2044] border-2 border-[#0F2044] hover:border-[#C5A059] hover:text-[#C5A059] transition-colors"
               >
                 Explore Practice Areas
-              </a>
+              </Link>
             </div>
           </div>
         </div>
